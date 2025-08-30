@@ -1,0 +1,156 @@
+.task-card {
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: move;
+  user-select: none;
+  transition: all 0.3s ease;
+  border-left: 4px solid;
+}
+
+.task-card.normal {
+  background: white;
+  border-left-color: #e5e7eb;
+}
+
+.task-card.warning {
+  background: #fffbeb;
+  border-left-color: #f59e0b;
+}
+
+.task-card.overdue {
+  background: #fef2f2;
+  border-left-color: #f97316;
+}
+
+.task-card.urgent {
+  background: #fef2f2;
+  border-left-color: #ef4444;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.task-card.dragging {
+  opacity: 0.7;
+  transform: rotate(2deg) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.task-title {
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.25rem;
+  margin-left: 0.5rem;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.edit-btn {
+  color: #6b7280;
+}
+
+.edit-btn:hover {
+  background: #f3f4f6;
+  color: #3b82f6;
+}
+
+.delete-btn {
+  color: #6b7280;
+}
+
+.delete-btn:hover {
+  background: #fef2f2;
+  color: #ef4444;
+}
+
+.task-description {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.task-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.task-time {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.urgent-btn {
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #9ca3af;
+  transition: all 0.2s ease;
+}
+
+.urgent-btn:hover {
+  background: #f3f4f6;
+  color: #f59e0b;
+}
+
+.urgent-btn.active {
+  background: #fef2f2;
+  color: #ef4444;
+}
+
+.task-created {
+  font-size: 0.75rem;
+  color: #d1d5db;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .task-card {
+    padding: 0.75rem;
+  }
+  
+  .task-title {
+    font-size: 0.9rem;
+  }
+  
+  .task-description {
+    font-size: 0.8rem;
+  }
+}
